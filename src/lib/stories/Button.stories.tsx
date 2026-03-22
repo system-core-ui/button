@@ -55,7 +55,7 @@ const BasicStory = () => (
 
 const VariantsStory = () => (
   <div style={{ padding: 32 }}>
-    {(['contained', 'outlined', 'text', 'ghost'] as ButtonVariant[]).map((v) => (
+    {(['contained', 'outlined', 'dashed', 'text', 'ghost'] as ButtonVariant[]).map((v) => (
       <Row key={v} label={v}>
         <Button variant={v}>Button</Button>
         <Button variant={v} color="secondary">Secondary</Button>
@@ -177,6 +177,7 @@ const DisabledStory = () => (
       <Button disabled>Contained</Button>
       <Button variant="outlined" disabled>Outlined</Button>
       <Button variant="text" disabled>Text</Button>
+      <Button variant="dashed" disabled>Dashed</Button>
       <Button variant="ghost" disabled>Ghost</Button>
     </Row>
   </div>
@@ -230,7 +231,7 @@ export const Disabled: StoryObj = { name: 'Disabled', render: () => <DisabledSto
 export const Playground: StoryObj = {
   name: 'Playground',
   argTypes: {
-    variant: { control: { type: 'select' }, options: ['contained', 'outlined', 'text', 'ghost'] },
+    variant: { control: { type: 'select' }, options: ['contained', 'outlined', 'dashed', 'text', 'ghost'] },
     color: { control: { type: 'select' }, options: ['primary', 'secondary', 'error', 'warning', 'info', 'success'] },
     size: { control: { type: 'select' }, options: ['sm', 'md', 'lg'] },
     rounded: { control: 'boolean' },

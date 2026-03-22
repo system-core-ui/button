@@ -2,7 +2,7 @@ import type { ButtonHTMLAttributes, ReactNode } from 'react';
 
 // ─── Types ──────────────────────────────────────────────
 
-export type ButtonVariant = 'contained' | 'outlined' | 'text' | 'ghost';
+export type ButtonVariant = 'contained' | 'outlined' | 'dashed' | 'text' | 'ghost';
 export type ButtonColor = 'primary' | 'secondary' | 'error' | 'warning' | 'info' | 'success';
 export type ButtonSize = 'sm' | 'md' | 'lg';
 

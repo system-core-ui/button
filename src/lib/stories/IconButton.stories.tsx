@@ -74,7 +74,7 @@ const BasicStory = () => (
 
 const VariantsColorsStory = () => (
   <div style={{ padding: 32 }}>
-    {(['contained', 'outlined', 'text', 'ghost'] as ButtonVariant[]).map((v) => (
+    {(['contained', 'outlined', 'dashed', 'text', 'ghost'] as ButtonVariant[]).map((v) => (
       <Row key={v} label={v}>
         {(['primary', 'secondary', 'error', 'warning', 'info', 'success'] as ButtonColor[]).map((c) => (
           <IconButton key={c} variant={v} color={c}>
@@ -124,7 +124,7 @@ export const VariantsColors: StoryObj = { name: 'Variants & Colors', render: () 
 export const Playground: StoryObj = {
   name: 'Playground',
   argTypes: {
-    variant: { control: { type: 'select' }, options: ['contained', 'outlined', 'text', 'ghost'] },
+    variant: { control: { type: 'select' }, options: ['contained', 'outlined', 'dashed', 'text', 'ghost'] },
     color: { control: { type: 'select' }, options: ['primary', 'secondary', 'error', 'warning', 'info', 'success'] },
     size: { control: { type: 'select' }, options: ['sm', 'md', 'lg'] },
     rounded: { control: 'boolean' },

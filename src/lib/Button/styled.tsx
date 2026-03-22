@@ -104,6 +104,17 @@ export const ButtonStyled = styled.button<ButtonStyledProps>(
           backgroundColor: colors.extraLight,
         },
       },
+      dashed: {
+        backgroundColor: 'transparent',
+        color: colors.main,
+        border: `1.5px dashed ${colors.main}`,
+        '&:hover': {
+          backgroundColor: colors.extraLight,
+        },
+        '&:active': {
+          backgroundColor: colors.extraLight,
+        },
+      },
       text: {
         backgroundColor: 'transparent',
         color: colors.main,
