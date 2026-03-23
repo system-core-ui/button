@@ -21,7 +21,7 @@ const getColorValues = (palette: ThemeSchema['palette'], color: ButtonColor) => 
 
 // ─── Styled ─────────────────────────────────────────────
 
-interface ButtonStyledProps {
+export interface ButtonStyledProps {
   ownerVariant: ButtonVariant;
   ownerColor: ButtonColor;
   ownerSize: ButtonSize;
