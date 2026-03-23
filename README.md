@@ -91,6 +91,37 @@ import { Button } from '@thanh-libs/button';
 </ThemeProvider>
 ```
 
+## Accessibility (WCAG 2.2)
+
+Both components comply with [WCAG 2.2](https://www.w3.org/TR/WCAG22/) out of the box:
+
+| Feature | Standard | Details |
+|---------|----------|---------|
+| Semantic `<button>` | SC 4.1.2 | Native role, keyboard support |
+| `aria-busy` | SC 4.1.2 | Set automatically during `loading` |
+| `aria-disabled` | SC 4.1.2 | Set when `disabled` or `loading` |
+| `role="status"` on spinner | SC 4.1.3 | Screen readers announce loading |
+| `aria-hidden` on icons | SC 1.1.1 | Decorative icons hidden from AT |
+| `:focus-visible` ring | SC 2.4.7 | Keyboard-only focus indicator |
+| High Contrast outline | SC 2.4.13 | Transparent outline for forced-colors mode |
+| `forwardRef` | SC 4.1.2 | Ref forwarding for programmatic focus |
+
+### IconButton — accessible name required
+
+Icon-only buttons have no visible text label. You **must** provide `aria-label`:
+
+```tsx
+// ✅ Correct
+<IconButton aria-label="Delete" color="error">
+  <TrashIcon />
+</IconButton>
+
+// ❌ Wrong — screen readers will announce nothing useful
+<IconButton color="error">
+  <TrashIcon />
+</IconButton>
+```
+
 ## License
 
 MIT
