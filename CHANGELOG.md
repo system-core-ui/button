@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2-alpha.1](https://github.com/qthan1004/react-lib-workspace/compare/v0.0.2-alpha.0...v0.0.2-alpha.1) (2026-03-23)
+
+
+### Bug Fixes
+
+* **button:** export ButtonStyledProps to fix TS4023 build error ([5dad300](https://github.com/qthan1004/react-lib-workspace/commit/5dad300f6738cfc63b4cb6d4070259aabe7b55ee))
+
 ### 0.0.2-alpha.0 (2026-03-23)
 
 
