@@ -11,9 +11,12 @@ import { IconButtonStyled } from './styled';
  *
  * Inherits all Button variant/color styles. Defaults to 'ghost' variant.
  *
+ * WCAG 2.2: Icon-only buttons MUST have an accessible name.
+ * Provide `aria-label` or wrap the icon content with visually-hidden text.
+ *
  * @example
  * ```tsx
- * <IconButton color="error" rounded>
+ * <IconButton color="error" aria-label="Delete" rounded>
  *   <TrashIcon />
  * </IconButton>
  * ```
@@ -41,12 +44,14 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
         ownerRounded={rounded}
         ownerLoading={loading}
         disabled={disabled || loading}
+        aria-busy={loading || undefined}
+        aria-disabled={disabled || loading || undefined}
         {...rest}
       >
         {loading ? (
-          <SpinnerStyled ownerSize={size} />
+          <SpinnerStyled ownerSize={size} role="status" aria-label="Loading" />
         ) : (
-          <ButtonIconStyled ownerSize={size}>{children}</ButtonIconStyled>
+          <ButtonIconStyled ownerSize={size} aria-hidden="true">{children}</ButtonIconStyled>
         )}
       </IconButtonStyled>
     );

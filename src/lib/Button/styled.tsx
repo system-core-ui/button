@@ -74,9 +74,10 @@ export const ButtonStyled = styled.button<ButtonStyledProps>(
         pointerEvents: 'none',
       },
 
-      // Focus visible ring
+      // Focus visible ring (WCAG 2.2 — SC 2.4.7 + SC 2.4.13)
       '&:focus-visible': {
         boxShadow: `0 0 0 3px ${colors.light}40`,
+        outline: '2px solid transparent', // visible in Windows High Contrast Mode
       },
     };
 
