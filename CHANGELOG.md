@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3-alpha.0](https://github.com/qthan1004/react-lib-workspace/compare/v0.0.2...v0.0.3-alpha.0) (2026-03-23)
+
+
+### Features
+
+* **button:** add WCAG 2.2 accessibility (aria-busy, aria-disabled, focus-visible) ([3cf2eff](https://github.com/qthan1004/react-lib-workspace/commit/3cf2eff941618a0a0dedf9c40aa6682256a47b9d))
+
 ### [0.0.2](https://github.com/qthan1004/react-lib-workspace/compare/v0.0.2-alpha.1...v0.0.2) (2026-03-23)
 
 ### [0.0.2-alpha.1](https://github.com/qthan1004/react-lib-workspace/compare/v0.0.2-alpha.0...v0.0.2-alpha.1) (2026-03-23)
