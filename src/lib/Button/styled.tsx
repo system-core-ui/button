@@ -2,6 +2,7 @@ import { CSSObject, useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 
 import { ThemeSchema } from '@thanh-libs/theme';
+import { pxToRem } from '@thanh-libs/utils';
 
 import type { ButtonVariant, ButtonColor, ButtonSize } from '../models';
 
@@ -76,7 +77,7 @@ export const ButtonStyled = styled.button<ButtonStyledProps>(
 
       // Focus visible ring (WCAG 2.2 — SC 2.4.7 + SC 2.4.13)
       '&:focus-visible': {
-        boxShadow: `0 0 0 3px ${colors.light}40`,
+        boxShadow: `0 0 0 ${pxToRem(3)} ${colors.light}40`,
         outline: '2px solid transparent', // visible in Windows High Contrast Mode
       },
     };
@@ -97,7 +98,7 @@ export const ButtonStyled = styled.button<ButtonStyledProps>(
       outlined: {
         backgroundColor: 'transparent',
         color: colors.main,
-        border: `1.5px solid ${colors.main}`,
+        border: `${pxToRem(1.5)} solid ${colors.main}`,
         '&:hover': {
           backgroundColor: colors.extraLight,
         },
@@ -108,7 +109,7 @@ export const ButtonStyled = styled.button<ButtonStyledProps>(
       dashed: {
         backgroundColor: 'transparent',
         color: colors.main,
-        border: `1.5px dashed ${colors.main}`,
+        border: `${pxToRem(1.5)} dashed ${colors.main}`,
         '&:hover': {
           backgroundColor: colors.extraLight,
         },
